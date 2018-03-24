@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+
+	"name": "Google Calendar Redirect Extension",
+	"description": "This will allow you to skip the step that confirms you are leaving Google calendar page",
+	"version": "1.0",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.google.com/url*"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"activeTab"
+	]
+}
